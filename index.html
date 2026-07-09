@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="SC301 가슴성형 모델 40% 할인 상담 신청">
+  <title>가슴성형 모델 40% 할인 | SC301</title>
+
+  <!-- OG (메타 광고 미리보기용) -->
+  <meta property="og:title" content="SC301 가슴성형 모델 40% 할인">
+  <meta property="og:description" content="가슴성형 모델 40% 할인 상담 신청">
+  <meta property="og:image" content="./01%20%EC%88%98%EC%A0%95.png">
+  <meta property="og:type" content="website">
+
+  <!-- ================================================
+       Meta Pixel
+       ★ PIXEL_ID_HERE → 실제 픽셀 ID로 교체하세요
+  ================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){
+    n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1262669058903180');
+    fbq('track','PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1262669058903180&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR',
+                   'Malgun Gothic', sans-serif;
+      background: #e8ecf0;
+      min-height: 100vh;
+    }
+
+    /* ============================================================
+       LAYOUT WRAPPER
+    ============================================================ */
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+    }
+
+    /* ============================================================
+       TICKER — 실시간 신청 알림 (Fixed Top)
+    ============================================================ */
+    #ticker {
+      position: fixed;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%; max-width: 480px;
+      height: 38px;
+      background: rgba(12, 12, 18, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      gap: 9px;
+      overflow: hidden;
+    }
+    .tk-live {
+      display: flex; align-items: center; gap: 5px;
+      flex-shrink: 0;
+    }
+    .tk-dot {
+      width: 7px; height: 7px;
+      background: #ff3b30; border-radius: 50%;
+      animation: tkPulse 1.3s ease-in-out infinite;
+    }
+    @keyframes tkPulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50%      { transform: scale(1.4); opacity: 0.5; }
+    }
+    .tk-live-txt {
+      font-size: 10px; font-weight: 800;
+      color: #ff3b30; letter-spacing: 1.2px;
+    }
+    .tk-sep {
+      width: 1px; height: 16px;
+      background: rgba(255,255,255,0.18); flex-shrink: 0;
+    }
+    .tk-slot {
+      flex: 1; height: 38px;
+      position: relative; overflow: hidden;
+    }
+    .tk-row {
+      position: absolute; width: 100%; height: 38px;
+      display: flex; align-items: center; gap: 0;
+      transition: transform .42s cubic-bezier(.4,0,.2,1), opacity .42s ease;
+    }
+    .tk-row.show     { transform: translateY(0);     opacity: 1; }
+    .tk-row.hide-up  { transform: translateY(-100%); opacity: 0; }
+    .tk-row.hide-dn  { transform: translateY(100%);  opacity: 0; }
+    .tk-name  { color: #ffd60a; font-size: 12.5px; font-weight: 700; }
+    .tk-act   { color: rgba(255,255,255,.78); font-size: 12px; margin: 0 3px; }
+    .tk-time  { color: rgba(255,255,255,.42); font-size: 11px; margin-right: 8px; }
+    .tk-phone { color: rgba(255,255,255,.45); font-size: 11px; }
+
+    /* ============================================================
+       CONTENT OFFSET (ticker 38px)
+    ============================================================ */
+    .main { padding-top: 38px; }
+
+    /* ============================================================
+       STEP SCREENS
+    ============================================================ */
+    .screen { display: none; flex-direction: column; }
+    .screen.on { display: flex; }
+
+    /* Image block */
+    .sc-img img { width: 100%; height: auto; display: block; }
+
+    /* Copy block */
+    .sc-copy {
+      padding: 18px 20px 12px;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .sc-copy p {
+      font-size: 14.5px; color: #2c2c2c;
+      line-height: 1.78; word-break: keep-all;
+    }
+    .hl     { color: #1565c0; font-weight: 700; }
+    .hl-red { color: #c62828; font-weight: 700; }
+
+    /* Badge row */
+    .badges {
+      display: flex; flex-wrap: wrap;
+      gap: 7px; padding: 12px 20px 0;
+    }
+    .bd {
+      font-size: 12px; font-weight: 600;
+      padding: 5px 12px; border-radius: 20px; line-height: 1;
+    }
+    .bd-bl { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
+    .bd-rd { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+    .bd-yl { background: #fffde7; color: #e65100; border: 1px solid #ffe082; }
+
+    /* CTA area */
+    .cta { padding: 20px 20px 38px; }
+    .btn-next {
+      width: 100%; padding: 17px 20px;
+      background: linear-gradient(135deg, #1565c0, #1e88e5);
+      color: #fff; font-size: 18px; font-weight: 800;
+      border: none; border-radius: 14px; cursor: pointer;
+      letter-spacing: -.3px;
+      box-shadow: 0 6px 22px rgba(21,101,192,.36);
+      transition: transform .14s, box-shadow .14s;
+      -webkit-appearance: none;
+    }
+    .btn-next:active {
+      transform: scale(.975);
+      box-shadow: 0 2px 10px rgba(21,101,192,.2);
+    }
+    .btn-prev {
+      background: none; border: none;
+      color: #aaa; font-size: 13px;
+      cursor: pointer; padding: 4px 0 10px;
+      display: inline-flex; align-items: center; gap: 3px;
+      -webkit-appearance: none;
+    }
+    .btn-prev:active { color: #666; }
+    .btn-cap {
+      text-align: center; font-size: 11.5px;
+      color: #bbb; margin-top: 9px;
+    }
+
+    /* ============================================================
+       FORM STEP (Step 6)
+    ============================================================ */
+    .form-hero {
+      background: linear-gradient(160deg, #0d47a1 0%, #1565c0 55%, #1e88e5 100%);
+      padding: 30px 22px 26px; color: #fff; text-align: center;
+    }
+    .form-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.3);
+      color: #fff; font-size: 12px; font-weight: 600;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 14px;
+    }
+    .form-hero h2 {
+      font-size: 23px; font-weight: 900;
+      line-height: 1.38; letter-spacing: -.5px; margin-bottom: 10px;
+    }
+    .form-hero p {
+      font-size: 13.5px; color: rgba(255,255,255,.82); line-height: 1.65;
+    }
+    .form-chips {
+      display: flex; justify-content: center;
+      gap: 8px; margin-top: 14px; flex-wrap: wrap;
+    }
+    .fchip {
+      background: rgba(255,255,255,.16);
+      color: rgba(255,255,255,.9);
+      font-size: 11px; padding: 4px 11px; border-radius: 12px;
+    }
+
+    .form-body { padding: 26px 20px; }
+
+    .fg { margin-bottom: 22px; }
+    .flbl {
+      display: block; font-size: 14px; font-weight: 700;
+      color: #111; margin-bottom: 9px;
+    }
+    .flbl .req { color: #e53935; margin-left: 2px; }
+
+    .finp {
+      width: 100%; padding: 14px 16px;
+      border: 1.5px solid #e4e4e4; border-radius: 12px;
+      font-size: 16px; color: #1a1a1a; background: #fafafa;
+      outline: none; -webkit-appearance: none;
+      transition: border-color .2s, background .2s, box-shadow .2s;
+    }
+    .finp:focus {
+      border-color: #1976d2; background: #fff;
+      box-shadow: 0 0 0 3.5px rgba(25,118,210,.11);
+    }
+    .finp::placeholder { color: #c8c8c8; }
+    .finp.err { border-color: #e53935; }
+
+    /* Radio cards */
+    .rlist { display: flex; flex-direction: column; gap: 9px; }
+    .rcard {
+      display: flex; align-items: center; gap: 12px;
+      padding: 13px 16px;
+      border: 1.5px solid #e4e4e4; border-radius: 12px;
+      cursor: pointer; background: #fafafa;
+      transition: border-color .2s, background .2s;
+    }
+    .rcard input[type=radio] {
+      width: 19px; height: 19px;
+      accent-color: #1976d2; flex-shrink: 0;
+    }
+    .rcard .rl { font-size: 14px; color: #333; font-weight: 500; cursor: pointer; }
+    .rcard:has(input:checked) { border-color: #1976d2; background: #e8f4fd; }
+
+    /* Privacy */
+    .prv {
+      background: #f7f7f7; border-radius: 12px;
+      padding: 14px 16px; margin-bottom: 20px;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .prv input { width: 18px; height: 18px; margin-top: 1px; flex-shrink: 0; accent-color: #1976d2; }
+    .prv p { font-size: 12px; color: #666; line-height: 1.65; }
+
+    .btn-sub {
+      width: 100%; padding: 17px;
+      background: linear-gradient(135deg, #c62828, #e53935);
+      color: #fff; font-size: 18px; font-weight: 800;
+      border: none; border-radius: 14px; cursor: pointer;
+      letter-spacing: -.3px;
+      box-shadow: 0 6px 22px rgba(229,57,53,.38);
+      -webkit-appearance: none;
+      transition: transform .14s;
+    }
+    .btn-sub:active { transform: scale(.975); }
+
+    .sub-note {
+      display: flex; justify-content: center;
+      gap: 16px; margin-top: 12px;
+    }
+    .snote { font-size: 11px; color: #bbb; }
+
+    /* ============================================================
+       THANK YOU
+    ============================================================ */
+    #ty {
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: calc(100vh - 90px);
+      padding: 52px 24px; text-align: center;
+    }
+    #ty.on { display: flex; }
+    .ty-icon {
+      width: 76px; height: 76px;
+      background: linear-gradient(135deg, #1565c0, #42a5f5);
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 36px; margin-bottom: 24px;
+    }
+    #ty h2 {
+      font-size: 25px; font-weight: 900;
+      color: #1565c0; letter-spacing: -.5px; margin-bottom: 12px;
+    }
+    #ty p { font-size: 15px; color: #555; line-height: 1.78; word-break: keep-all; }
+    .ty-card {
+      background: linear-gradient(135deg, #e3f2fd, #e8f5fd);
+      border: 1px solid #90caf9; border-radius: 16px;
+      padding: 20px 22px; margin-top: 26px; width: 100%; text-align: left;
+    }
+    .ty-row {
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 13.5px; color: #1565c0; line-height: 1.6;
+      margin-bottom: 9px;
+    }
+    .ty-row:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+<!-- =====================================================
+     TICKER — 실시간 신청 알림
+===================================================== -->
+<div id="ticker">
+  <div class="tk-live">
+    <div class="tk-dot"></div>
+    <span class="tk-live-txt">LIVE</span>
+  </div>
+  <div class="tk-sep"></div>
+  <div class="tk-slot" id="tkSlot"></div>
+</div>
+
+<!-- =====================================================
+     MAIN WRAPPER
+===================================================== -->
+<div class="wrap">
+<div class="main">
+
+  <!-- ===========================
+       STEP 1 : IMAGE 01
+  =========================== -->
+  <div class="screen on image-step" id="s1">
+    <div class="sc-img"><img src="./01%20%EC%88%98%EC%A0%95.png" alt="가슴성형 모델 40% 할인 1페이지"></div>
+    <div class="sc-copy">
+      <p>
+        <span class="hl">가슴성형 모델 40% 할인 이벤트.</span><br>
+        가슴성형 상담부터 수술 플랜까지,<br>
+        나에게 딱 맞는 솔루션을 <span class="hl">한 번에</span> 받아보세요.
+      </p>
+    </div>
+    <div class="badges">
+      <span class="bd bd-rd">🔥 선착순 100명 한정</span>
+      <span class="bd bd-yl">🌼 2026 여름 특별 혜택</span>
+    </div>
+    <div class="cta">
+      <button class="btn-next" onclick="go(2)">지금 바로 확인하기 →</button>
+      <p class="btn-cap">무료 상담 · 모델 40% 할인 가능 여부 확인</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 2 : IMAGE 02
+  =========================== -->
+  <div class="screen image-step" id="s2">
+    <div class="sc-img"><img src="./02.png" alt="가슴성형 모델 40% 할인 2페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(1)">← 이전</button>
+      <button class="btn-next" onclick="go(3)">다음 (40%) →</button>
+      <p class="btn-cap">선착순 모델 할인 혜택을 계속 확인해보세요</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 3 : IMAGE 03
+  =========================== -->
+  <div class="screen image-step" id="s3">
+    <div class="sc-img"><img src="./03.png" alt="가슴성형 모델 40% 할인 3페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(2)">← 이전</button>
+      <button class="btn-next" onclick="go(4)">다음 (55%) →</button>
+      <p class="btn-cap">나에게 맞는 가슴 라인을 확인해보세요</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 4 : IMAGE 04
+  =========================== -->
+  <div class="screen image-step" id="s4">
+    <div class="sc-img"><img src="./04%20%EC%88%98%EC%A0%95.png" alt="가슴성형 모델 40% 할인 4페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(3)">← 이전</button>
+      <button class="btn-next" onclick="go(5)">다음 (70%) →</button>
+      <p class="btn-cap">가슴성형 전 꼭 확인할 포인트를 살펴보세요</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 5 : IMAGE 05
+  =========================== -->
+  <div class="screen image-step" id="s5">
+    <div class="sc-img"><img src="./05%20%EC%88%98%EC%A0%95.png" alt="가슴성형 모델 40% 할인 5페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(4)">← 이전</button>
+      <button class="btn-next" onclick="go(6)">다음 (85%) →</button>
+      <p class="btn-cap">모델 40% 할인 조건을 마지막까지 확인해보세요</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 6 : IMAGE 06
+  =========================== -->
+  <div class="screen image-step" id="s6">
+    <div class="sc-img"><img src="./06%20%EC%88%98%EC%A0%95.png" alt="가슴성형 모델 40% 할인 6페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(5)">← 이전</button>
+      <button class="btn-next" onclick="go(7)">다음 (99%) →</button>
+      <p class="btn-cap">부담 없이 먼저 상담만 받아보세요</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 7 : IMAGE 07
+  =========================== -->
+  <div class="screen image-step" id="s7">
+    <div class="sc-img"><img src="./07.png" alt="가슴성형 모델 40% 할인 7페이지"></div>
+    <div class="cta">
+      <button class="btn-prev" onclick="go(6)">← 이전</button>
+      <button class="btn-next" onclick="go(8)">무료 상담 신청하기 →</button>
+      <p class="btn-cap">선착순 혜택은 조기 마감될 수 있습니다</p>
+    </div>
+  </div>
+
+  <!-- ===========================
+       STEP 8 : DB 수집 폼
+  =========================== -->
+  <div class="screen" id="s8">
+    <div class="form-hero">
+      <div class="form-badge">마지막 단계</div>
+      <h2>가슴성형 모델 40% 할인</h2>
+      <p>남은 혜택 수량이 얼마 남지 않았으니<br>늦지 않게 신청해주시길 바랍니다.</p>
+      <div class="form-chips">
+        <span class="fchip">🔒 개인정보 보호</span>
+      </div>
+    </div>
+
+    <div class="form-body">
+      <button class="btn-prev" onclick="go(7)">← 이전</button>
+
+      <!-- 이름 -->
+      <div class="fg">
+        <label class="flbl" for="iName">이름 <span class="req">*</span></label>
+        <input type="text" id="iName" class="finp" placeholder="이름을 입력해주세요" autocomplete="name">
+      </div>
+
+      <!-- 연락처 -->
+      <div class="fg">
+        <label class="flbl" for="iPhone">연락처 <span class="req">*</span></label>
+        <input type="tel" id="iPhone" class="finp" placeholder="010-0000-0000"
+               inputmode="numeric" maxlength="13">
+      </div>
+
+      <!-- 상담 항목 -->
+      <div class="fg">
+        <label class="flbl">상담 항목 <span class="req">*</span></label>
+        <div class="rlist">
+          <label class="rcard">
+            <input type="radio" name="consult" value="가슴성형 첫수술">
+            <span class="rl">가슴성형 첫수술</span>
+          </label>
+          <label class="rcard">
+            <input type="radio" name="consult" value="가슴성형 재수술">
+            <span class="rl">가슴성형 재수술</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 개인정보 동의 -->
+      <div class="prv">
+        <input type="checkbox" id="iPrivacy">
+        <p>[필수] 개인정보 수집 및 이용에 동의합니다.
+          수집된 정보는 상담 목적으로만 사용되며 개인정보보호법에 따라 안전하게 처리됩니다.</p>
+      </div>
+
+      <button class="btn-sub" onclick="submitForm()">🎉 무료 상담 신청하기</button>
+
+      <div class="sub-note">
+        <span class="snote">🔒 암호화 전송</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===========================
+       THANK YOU
+  =========================== -->
+  <div id="ty">
+    <div class="ty-icon">✅</div>
+    <h2>이벤트 신청 완료</h2>
+    <p>
+      혜택 신청이 완료되었습니다.<br>
+      3회 이상 부재 시, 혜택이 다음 분에게 넘어가니<br>
+      전화를 꼭 받아주시길 바랍니다.
+    </p>
+  </div>
+
+</div><!-- /.main -->
+</div><!-- /.wrap -->
+
+<script>
+/* ================================================================
+   CONFIG
+   ★ Apps Script 배포 후 GAS_URL에 웹 앱 URL을 붙여넣으세요
+================================================================ */
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwnYVEzqBiKH9nhdxON1ioonVKwpD0VNJyUw_rI0ZanwJaINBzMc28iNyxIN-J-gwxrzQ/exec';
+const TOTAL = 8;
+let cur = 1;
+
+/* ================================================================
+   TICKER — 실시간 신청자 알림
+================================================================ */
+const TK = [
+  { name:'김*영', time:'방금 전',  phone:'010-****-2847' },
+  { name:'이*준', time:'1분 전',   phone:'010-****-5193' },
+  { name:'박*희', time:'2분 전',   phone:'010-****-8374' },
+  { name:'최*진', time:'3분 전',   phone:'010-****-4521' },
+  { name:'정*아', time:'5분 전',   phone:'010-****-9062' },
+  { name:'한*민', time:'7분 전',   phone:'010-****-3784' },
+  { name:'윤*서', time:'9분 전',   phone:'010-****-6129' },
+  { name:'장*현', time:'12분 전',  phone:'010-****-7456' },
+  { name:'강*연', time:'15분 전',  phone:'010-****-1893' },
+  { name:'조*우', time:'18분 전',  phone:'010-****-5320' },
+  { name:'신*하', time:'21분 전',  phone:'010-****-0748' },
+  { name:'임*나', time:'25분 전',  phone:'010-****-3961' },
+  { name:'오*진', time:'28분 전',  phone:'010-****-6274' },
+  { name:'홍*미', time:'32분 전',  phone:'010-****-8103' },
+];
+
+const tkSlot = document.getElementById('tkSlot');
+let tkIdx = 0;
+let tkCur = null;
+
+function mkRow(d) {
+  const el = document.createElement('div');
+  el.className = 'tk-row hide-dn';
+  el.innerHTML =
+    '<span class="tk-name">' + d.name + '님</span>' +
+    '<span class="tk-act"> 상담 신청 </span>' +
+    '<span class="tk-time">' + d.time + '</span>' +
+    '<span class="tk-phone">' + d.phone + '</span>';
+  return el;
+}
+
+function rotateTk() {
+  const next = mkRow(TK[tkIdx]);
+  tkSlot.appendChild(next);
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      if (tkCur) {
+        tkCur.classList.remove('show');
+        tkCur.classList.add('hide-up');
+        var old = tkCur;
+        setTimeout(function() { old.remove(); }, 480);
+      }
+      next.classList.remove('hide-dn');
+      next.classList.add('show');
+      tkCur = next;
+    });
+  });
+  tkIdx = (tkIdx + 1) % TK.length;
+}
+
+rotateTk();
+setInterval(rotateTk, 3800);
+
+/* ================================================================
+   STEP NAVIGATION
+================================================================ */
+function go(step) {
+  document.getElementById('s' + cur).classList.remove('on');
+  cur = step;
+  var el = document.getElementById('s' + cur);
+  if (el) {
+    el.classList.add('on');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Step ' + cur });
+}
+
+/* ================================================================
+   FAKE PHONE DETECTION
+================================================================ */
+function isFakePhone(phone) {
+  var d    = phone.replace(/\D/g, '');
+  if (d.length < 10) return true;
+
+  var mid  = d.slice(3, 7);
+  var last = d.slice(7);
+  var body = d.slice(3);
+
+  // 중간 4자리 & 뒷 4자리 각각 동일 숫자 (010-2222-7777 등)
+  var midSame  = mid.split('').every(function(c){ return c === mid[0]; });
+  var lastSame = last.split('').every(function(c){ return c === last[0]; });
+  if (midSame && lastSame) return true;
+
+  // 뒷 8자리 전체 동일 숫자 (010-1111-1111 등)
+  if (body.split('').every(function(c){ return c === body[0]; })) return true;
+
+  // 순차 번호 (010-1234-5678 / 010-9876-5432)
+  if ('0123456789012345678'.indexOf(body) !== -1) return true;
+  if ('9876543210987654321'.indexOf(body) !== -1) return true;
+
+  return false;
+}
+
+/* ================================================================
+   PHONE FORMAT
+================================================================ */
+document.getElementById('iPhone').addEventListener('input', function(e) {
+  var v = e.target.value.replace(/\D/g, '').slice(0, 11);
+  if (v.length >= 8)      v = v.slice(0,3) + '-' + v.slice(3,7) + '-' + v.slice(7);
+  else if (v.length >= 4) v = v.slice(0,3) + '-' + v.slice(3);
+  e.target.value = v;
+});
+
+/* ================================================================
+   FORM SUBMIT
+================================================================ */
+async function submitForm() {
+  var name    = document.getElementById('iName').value.trim();
+  var phone   = document.getElementById('iPhone').value.trim();
+  var cEl     = document.querySelector('input[name="consult"]:checked');
+  var consult = cEl ? cEl.value : '';
+  var privacy = document.getElementById('iPrivacy').checked;
+
+  var nameEl  = document.getElementById('iName');
+  var phoneEl = document.getElementById('iPhone');
+
+  /* Validation */
+  if (!name) {
+    nameEl.classList.add('err'); nameEl.focus(); return;
+  }
+  nameEl.classList.remove('err');
+
+  if (!phone || phone.replace(/\D/g,'').length < 10) {
+    phoneEl.classList.add('err'); phoneEl.focus(); return;
+  }
+  if (isFakePhone(phone)) {
+    phoneEl.classList.add('err');
+    phoneEl.value = '';
+    phoneEl.placeholder = '올바른 연락처를 입력해주세요';
+    phoneEl.focus();
+    return;
+  }
+  phoneEl.classList.remove('err');
+
+  if (!consult) { alert('상담 항목을 선택해주세요.'); return; }
+  if (!privacy)  { alert('개인정보 수집 및 이용에 동의해주세요.'); return; }
+
+  /* ── Meta Pixel: Lead 이벤트 ── */
+  if (window.fbq) {
+    fbq('track', 'Lead', {
+      content_name: consult,
+      content_category: '가슴성형 상담 신청',
+    });
+  }
+
+  /* ── Google Sheets 전송 (Image beacon — CORS 우회, 전송 100% 보장) ── */
+  var params = new URLSearchParams({ nm: name, ph: phone, cs: consult });
+  var beacon = new Image();
+  beacon.src = GAS_URL + '?' + params.toString();
+  console.log('전송 URL:', beacon.src);
+
+  /* Thank you */
+  document.getElementById('s8').classList.remove('on');
+  document.getElementById('ty').classList.add('on');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
